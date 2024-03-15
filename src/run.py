@@ -1,6 +1,9 @@
 import square_generator
 
 try:
-    print(square_generator.squares_in_range(1,10))
+    square = square_generator.SquareGenerator(1,10)
+    cubes = square_generator.CubicGenerator(1,5)
+    print(square.squares_in_range())
+    print(cubes.cubes_in_range())
 except ValueError:
     print("Invalid range, start > end")
