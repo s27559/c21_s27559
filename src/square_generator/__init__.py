@@ -13,6 +13,14 @@ class SquareGenerator:
         return squares
 
 class CubicGenerator(SquareGenerator):
+
+    def squares_in_range(self) -> list:
+        if self.start < self.end:
+            squares = [math.pow(x,2) for x in range(self.start, self.end+1)]
+            return squares
+        else:
+            return ValueError
+
     def cubes_in_range(self) -> list:
         if self.start > self.end:
             raise ValueError
